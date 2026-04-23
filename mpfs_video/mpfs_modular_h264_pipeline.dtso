@@ -294,7 +294,7 @@
 				imx334_ep_cam0: endpoint {
 					remote-endpoint = <&csi2_0_in>;
 					data-lanes = <1 2 3 4>;
-					link-frequencies = /bits/ 64 <891000000 445500000>;
+					link-frequencies = /bits/ 64 <891000000 222500000>;
 				};
 			};
 		};
