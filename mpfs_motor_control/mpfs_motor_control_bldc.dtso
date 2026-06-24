@@ -1,0 +1,56 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/*
+ * Device Tree Overlay for MPFS Motor Control Kit - BLDC
+ *
+ * Copyright (C) 2026 Microchip Technology Inc. and its subsidiaries.
+ * Author: Sunny Bezawada <sunny.bezawada@microchip.com>
+ *
+ */
+
+/dts-v1/;
+/plugin/;
+
+/ {
+	compatible = "microchip,mpfs-motor-control-kit","microchip,mpfs";
+};
+
+&fabric_bus {
+	#address-cells = <2>;
+	#size-cells = <2>;
+
+	adc-scaling@60000000 {
+		compatible = "microchip,adc-scaling-rtl-v4.3";
+		reg = <0x0 0x60000000 0x0 0x1000>;
+		status = "okay";
+	};
+
+	pwm3ph@60001000 {
+		compatible = "microchip,pwm3ph-rtl-v4.2";
+		reg = <0x0 0x60001000 0x0 0x1000>;
+		status = "okay";
+	};
+
+	speed-id-iq-pi@60002000 {
+		compatible = "microchip,speed-id-iq-pi-rtl-v4.2";
+		reg = <0x0 0x60002000 0x0 0x1000>;
+		status = "okay";
+	};
+
+	seq-controller@60003000 {
+		compatible = "microchip,seq-controller-rtl-v4.2";
+		reg = <0x0 0x60003000 0x0 0x1000>;
+		status = "okay";
+	};
+
+	rate-limiter@60004000 {
+		compatible = "microchip,rate-limiter-rtl-v4.2";
+		reg = <0x0 0x60004000 0x0 0x1000>;
+		status = "okay";
+	};
+
+	stepper-theta@60010000 {
+		compatible = "microchip,stepper-theta-rtl-v4.2";
+		reg = <0x0 0x60010000 0x0 0x1000>;
+		status = "okay";
+	};
+};
