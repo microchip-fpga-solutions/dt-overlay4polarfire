@@ -138,43 +138,39 @@
 		status = "okay";
 	};
 
-	motor_adc: motor_adc@60000000 {
-		compatible = "motor_adc";
+	adc-scaling@60000000 {
+		compatible = "microchip,adc-scaling-rtl-v4.3";
+		reg = <0x0 0x60000000 0x0 0x1000>;
+		status = "okay";
+	};
 
-		adc-scaling@60000000 {
-			compatible = "microchip,adc-scaling-rtl-v4.3";
-			reg = <0x0 0x60000000 0x0 0x1000>;
-			status = "okay";
-		};
+	pwm3ph@60001000 {
+		compatible = "microchip,pwm3ph-rtl-v4.2";
+		reg = <0x0 0x60001000 0x0 0x1000>;
+		status = "okay";
+	};
 
-		pwm3ph@60001000 {
-			compatible = "microchip,pwm3ph-rtl-v4.2";
-			reg = <0x0 0x60001000 0x0 0x1000>;
-			status = "okay";
-		};
+	speed-id-iq-pi@60002000 {
+		compatible = "microchip,speed-id-iq-pi-rtl-v4.2";
+		reg = <0x0 0x60002000 0x0 0x1000>;
+		status = "okay";
+	};
 
-		speed-id-iq-pi@60002000 {
-			compatible = "microchip,speed-id-iq-pi-rtl-v4.2";
-			reg = <0x0 0x60002000 0x0 0x1000>;
-			status = "okay";
-		};
+	seq-controller@60003000 {
+		compatible = "microchip,seq-controller-rtl-v4.2";
+		reg = <0x0 0x60003000 0x0 0x1000>;
+		status = "okay";
+	};
 
-		seq-controller@60003000 {
-			compatible = "microchip,seq-controller-rtl-v4.2";
-			reg = <0x0 0x60003000 0x0 0x1000>;
-			status = "okay";
-		};
+	rate-limiter@60004000 {
+		compatible = "microchip,rate-limiter-rtl-v4.2";
+		reg = <0x0 0x60004000 0x0 0x1000>;
+		status = "okay";
+	};
 
-		rate-limiter@60004000 {
-			compatible = "microchip,rate-limiter-rtl-v4.2";
-			reg = <0x0 0x60004000 0x0 0x1000>;
-			status = "okay";
-		};
-
-		stepper-theta@60010000 {
-			compatible = "microchip,stepper-theta-rtl-v4.2";
-			reg = <0x0 0x60010000 0x0 0x1000>;
-			status = "okay";
-		};
+	stepper-theta@60010000 {
+		compatible = "microchip,stepper-theta-rtl-v4.2";
+		reg = <0x0 0x60010000 0x0 0x1000>;
+		status = "okay";
 	};
 };
