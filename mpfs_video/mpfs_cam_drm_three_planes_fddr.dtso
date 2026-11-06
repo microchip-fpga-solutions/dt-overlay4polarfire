@@ -55,6 +55,20 @@
 		#clock-cells = <0>;
 		clock-frequency = <125000000>;
 	};
+
+	reserved-memory {
+		fabric1cambuff1: buffer@E0000000 {
+			compatible = "shared-dma-pool";
+			reg = <0x00 0xE0000000 0x0 0x4000000>;
+			no-map;
+		};
+
+		fabric1disbuff1: buffer@E4000000 {
+			compatible = "shared-dma-pool";
+			reg = <0x00 0xE4000000 0x0 0x8000000>;
+			no-map;
+		};
+	};
 };
 
 &fabric_bus {
